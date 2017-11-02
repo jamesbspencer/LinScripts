@@ -11,8 +11,8 @@ import gzip
 
 #Declare variables
 server = ServerProxy('http://api.opensubtitles.org/xml-rpc')
-username = 'jspencer241'
-password = '00cougar'
+username = ''
+password = ''
 language = 'en'
 useragent = 'OSTestUserAgentTemp'
 searchlang = 'eng'
