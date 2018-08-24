@@ -18,7 +18,8 @@ virt-install \
 --vcpus $cpu \
 --os-type $type \
 --os-variant $variant \
---disk path=$dpath/$name.qcow2,size=$dsize \
+--disk path=$dpath/$name.qcow2,size=$dsize,sparce=true,format=qcow2 \
 --cdrom $cdpath/$cdiso \
 --network bridge=$net \
+--graphics vnc \
 --autostart
