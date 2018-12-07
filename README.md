@@ -1,1 +1,1 @@
-# LinScripts
+# Linux Scripts
