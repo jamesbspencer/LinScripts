@@ -4,7 +4,7 @@
 ##Created by: James Spencer
 
 
-name='repo'             #VM Name
+name='test'             #VM Name
 type='linux'            #OS type linux or windows
 variant='centos7.0'     #OS Variant win2k8,rhel7,centos7.0
 mem='2048'              #Memory in MB
@@ -29,5 +29,6 @@ virt-install \
 --disk path=$dpath/$name.qcow2 \
 --cdrom $cdpath/$cdiso \
 --network bridge=$net \
+--extra-args "ks=http://mgmt/ks/$name.cfg" \
 --graphics vnc \
 --autostart
