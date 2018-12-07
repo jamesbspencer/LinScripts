@@ -27,7 +27,7 @@ virt-install \
 --os-type $type \
 --os-variant $variant \
 --disk path=$dpath/$name.qcow2 \
---cdrom $cdpath/$cdiso \
+--location $cdpath/$cdiso \
 --network bridge=$net \
 --extra-args "ks=http://mgmt/ks/$name.cfg" \
 --graphics vnc \
