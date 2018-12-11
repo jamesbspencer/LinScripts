@@ -14,6 +14,10 @@ if [ "$1" != "" ]; then
         #If 1 has value then see if it is also in the array.
         if [[ ${hosts[@]} =~ $1 ]]; then
                 port=`virsh vncdisplay $1 | awk -F: '{print $2}'`
+                chars=${#port}
+                if [ "$chars" -lt "2" ]; then
+                        port=0$port
+                fi
                 echo $port
                 echo "NoVNC will be started on http://192.168.77.42:6080"
                 echo "Press CNTRL + C to stop"
